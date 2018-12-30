@@ -53,14 +53,6 @@ Install Grunt modules:
 
 	npm install
 
-Install [Bower](http://bower.io):
-
-	npm install -g bower
-
-Install Bower components:
-
-	bower install
-
 Build Grunt project:
 
 	grunt

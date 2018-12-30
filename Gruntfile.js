@@ -12,19 +12,19 @@ module.exports = function(grunt) {
             'jsSrcDir': 'src/js',
             'jsTargetDir': 'js',
             'jsDependencies': [
-                'bower_components/jquery/dist/jquery.min.js',
-                'bower_components/history.js/scripts/bundled/html4+html5/jquery.history.js',
-                'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
-                'bower_components/masonry/dist/masonry.pkgd.min.js',
-                'bower_components/fitvids/jquery.fitvids.js',
-                //'bower_components/highlightjs/highlight.pack.min.js',
-                'bower_components/nprogress/nprogress.js',
+                'node_modules/jquery/dist/jquery.min.js',
+                'node_modules/jquery-history/dist/jquery.history.min.js',
+                'node_modules/imagesloaded/imagesloaded.pkgd.min.js',
+                'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
+                'node_modules/vanilla-fitvids/jquery.fitvids.js',
+                //'node_modules/highlightjs/highlight.pack.min.js',
+                'node_modules/nprogress/nprogress.js',
                 'src/js/vendor/gist-embed.min.js'
             ],
             'cssDependencies': [
-                'bower_components/normalize.css/normalize.css',
-                'bower_components/highlightjs/styles/default.css',
-                'bower_components/nprogress/nprogress.css'
+                'node_modules/normalize.css/normalize.css',
+                'node_modules/highlightjs/styles/default.css',
+                'node_modules/nprogress/nprogress.css'
             ]
         },
         copy: {
