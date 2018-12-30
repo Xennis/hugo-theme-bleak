@@ -125,6 +125,10 @@
     </script>
     {{ end }}
 
+    {{ if .Params.js }}
+    <script type="text/javascript" src="{{ .Params.js }}"></script>
+    {{ end }}
+
     {{ if ne .Params.comments false}}
     <script type="text/javascript">
         {{ $doc := . }}
