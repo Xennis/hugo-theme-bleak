@@ -1,5 +1,7 @@
 # Bleak
 
+[![Build Status](https://travis-ci.org/Xennis/hugo-theme-bleak.svg?branch=master)](https://travis-ci.org/Xennis/hugo-theme-bleak)
+
 Theme based from Ghost [Bleak](https://github.com/zutrinken/bleak) by [zutrinken](https://github.com/zutrinken).
 
 ## Index view
@@ -45,21 +47,17 @@ Theme based from Ghost [Bleak](https://github.com/zutrinken/bleak) by [zutrinken
 
 ## Development
 
-Install [Grunt](http://gruntjs.com/getting-started/):
-
-	npm install -g grunt-cli
-
 Install Grunt modules:
 
 	npm install
 
 Build Grunt project:
 
-	grunt
+	./node_modules/grunt/bin/grunt
 
 Distribute Grunt project:
 
-	grunt build
+	./node_modules/grunt/bin/grunt build
 
 
 Copyright (C) 2015-2016 Peter Amende - Released under the MIT License.
