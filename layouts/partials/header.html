@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <meta property="og:title" content="{{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
     <meta property="og:site_name" content="{{ .Site.Title }}" />
@@ -16,16 +15,6 @@
     {{ range .Params.tags }}<meta property="og:article:tag" content="{{ . }}" />
     {{ end }}
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@{{ .Site.Params.twitter }}" />
-    <meta name="twitter:creator" content="@{{ .Site.Params.twitter }}" />
-    <meta name="twitter:title" content="{{ .Title }}" />
-    {{ if .Params.image }}
-    <meta name="twitter:image" content="{{ $.Site.BaseURL }}images/{{ .Params.image }}" />
-    {{ end }}
-    <meta name="twitter:description" content="{{ .Summary }}" />
-    <meta name="twitter:url" content="{{ .Permalink }}" />
-    {{ else }}
     <meta property="og:type" content="website" />
     {{ end }}
 
@@ -55,12 +44,6 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
     {{ if ne .URL "/" }}
     <link href="{{ .Site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -170,9 +153,6 @@
                 {{ if .Site.Menus.subscription }}
                 <a class="menu subscription" data-action="subscription"
                    data-target="subscription" title="Subscribe Podcast">Subscribe</a>
-                {{ end }}
-                {{ if .Site.Params.instagram }}
-                    <a class="nav-social" target="_blank" href="https://instagram.com/{{ .Site.Params.instagram }}" title="{{ .Site.Title }} on Instagram"><i class="fa fa-instagram"></i></a>
                 {{ end }}
                 <a id="search-button" onclick="$('#search-form').toggle();" title="Search"><i class="fa fa-search"></i></a>
                 <form id="search-form" method="get" role="search" action="https://google.com/search">
