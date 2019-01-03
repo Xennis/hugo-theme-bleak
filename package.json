@@ -22,18 +22,6 @@
     "load-grunt-tasks": "^4.0.0"
   },
   "dependencies": {
-    "desandro-matches-selector": "^2.0.0",
-    "ev-emitter": "^1.0.0",
-    "fizzy-ui-utils": "^2.0.0",
-    "get-size": "^2.0.2",
-    "highlightjs": "~9.10.0",
-    "imagesloaded": "~4.1.1",
-    "jquery": "~2.2.4",
-    "jquery-history": "~1.0.1",
-    "masonry-layout": "~4.1.1",
-    "normalize.css": "~5.0.0",
-    "nprogress": "~0.2.0",
-    "outlayer": "^2.1.0",
-    "vanilla-fitvids": "~1.1.0"
+    "jquery": "~2.2.4"
   }
 }
