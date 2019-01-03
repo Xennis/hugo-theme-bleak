@@ -12,21 +12,8 @@ module.exports = function(grunt) {
             'cssTargetDir': 'css',
             'jsSrcDir': 'src/js',
             'jsTargetDir': 'js',
-            'jsDependencies': [
-                'node_modules/jquery/dist/jquery.min.js',
-                'node_modules/jquery-history/dist/jquery.history.min.js',
-                'node_modules/imagesloaded/imagesloaded.pkgd.min.js',
-                'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
-                'node_modules/vanilla-fitvids/jquery.fitvids.js',
-                //'node_modules/highlightjs/highlight.pack.min.js',
-                'node_modules/nprogress/nprogress.js',
-                'src/js/vendor/gist-embed.min.js'
-            ],
-            'cssDependencies': [
-                'node_modules/normalize.css/normalize.css',
-                'node_modules/highlightjs/styles/default.css',
-                'node_modules/nprogress/nprogress.css'
-            ]
+            'jsDependencies': ['node_modules/jquery/dist/jquery.min.js'],
+            'cssDependencies': []
         },
         copy: {
             dev: {
