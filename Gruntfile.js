@@ -40,7 +40,7 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     implementation: sass,
-                    sourceMaps: true
+                    sourceMaps: false
                 },
                 files: {
                     'static/<%=  config.cssTargetDir %>/style.css': '<%=  config.cssSrcDir %>/style.scss'
