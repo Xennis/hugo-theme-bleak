@@ -84,118 +84,12 @@ jQuery(function($) {
     currentMenuFix();
 
     /* ==========================================================================
-       Masonry
-       ========================================================================== */
-
-    function grid() {
-        $('.post-list .post .post-image img').each(function() {
-            var img = $(this);
-            img.load(function() {
-                img.parents('.post-image').css({
-                    'height': '0',
-                    'padding-bottom': 100 / img.width() * img.height() + '%'
-                });
-            });
-        });
-        var postlist = $('.post-list').masonry({
-            itemSelector: '.post',
-            isAnimated: false,
-            gutter: 0,
-            columnWidth: 1,
-            transitionDuration: 0
-        }).imagesLoaded().always(function() {
-            postlist.masonry('layout');
-        });
-    }
-    grid();
-
-    /* ==========================================================================
-       Run Highlight
-       ========================================================================== */
-
-    function highlight() {
-        $('pre code').each(function(i, e) {
-            hljs.highlightBlock(e);
-            var code = $(this);
-            var lines = code.html().split(/\n/).length;
-            var numbers = [];
-            for (i = 1; i < lines; i++) {
-                numbers += '<span class="line">' + i + '</span>';
-            }
-            code.parent().addClass('codeblock').append('<div class="lines">' + numbers + '</div>');
-        });
-    }
-    //highlight();
-
-    /* ==========================================================================
-       Fitvids
-       ========================================================================== */
-
-    function video() {
-        $('#wrapper').fitVids();
-    }
-    video();
-
-    /* ==========================================================================
-       Initialize and load Disqus
-       ========================================================================== */
-
-    function comments() {
-        if (window.location.hostname == "localhost")
-          return;
-
-        if (typeof disqus_shortname === 'undefined' || !document.getElementById('disqus_thread')) {
-            $('.post-comments').hide();
-        } else {
-            if (window.DISQUS) {
-                $('.post-comments').show();
-
-								var url = location.href;
-								if(url.slice(-1) !== '/') {
-									url = url + '/';
-								}
-                return DISQUS.reset({
-                    reload: true,
-                    config: function() {
-                        this.page.identifier = url;
-                        this.page.url = url;
-                    }
-                });
-            } else {
-              // Lazy script loading
-              $.ajax({
-                  type: "GET",
-                  url: "//" + disqus_shortname + ".disqus.com/embed.js",
-                  dataType: "script",
-                  cache: true
-              }).done(function() {
-  							comments();
-  						});
-            }
-        }
-    }
-    comments();
-
-    /* ==========================================================================
-	   Initialize and load Gist
-	   ========================================================================== */
-
-    function gist() {
-        $('[data-gist-id]').gist();
-    }
-    gist();
-
-    /* ==========================================================================
        Reload all scripts after AJAX load
        ========================================================================== */
 
     function reload() {
         grid();
         ajaxLinkClass();
-        //highlight();
-        video();
-        comments();
-        gist();
         currentMenuFix();
         blurUpImages();
     }
